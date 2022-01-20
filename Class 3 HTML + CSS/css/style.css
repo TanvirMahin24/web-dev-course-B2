@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.red {
+  background: red !important;
+  float: right;
+}
+
+.header {
+  background: blue;
+  text-align: center;
+  height: 50vh;
+  width: 50%;
+  overflow: hidden;
+  float: left;
+  border-bottom: 10px dashed black;
+}
+
+.header > h1 {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.logo {
+  width: 20%;
+  border: 2px solid #111;
+  border-radius: 50%;
+}
+
+p,
+h1 {
+  color: white;
+}
+
+/* 
+div p {
+  color: turquoise;
+}
+
+.list li {
+  background: red;
+  padding-top: 50px;
+} */
