@@ -1,0 +1,45 @@
+:root {
+  --project-light: #e7f2fc;
+}
+
+.h_100 {
+  height: 100vh;
+}
+
+.bg_light {
+  background: var(--project-light) !important;
+}
+
+.card_width {
+  margin-left: 60px;
+  max-width: 420px;
+}
+
+#login .login_img {
+  transform: scaleX(-1);
+}
+
+#login a {
+  text-decoration: none !important;
+}
+
+#login a:hover {
+  text-decoration: underline !important;
+}
+
+@media screen and (max-width: 768px) {
+  .card_width {
+    margin-left: 0px;
+    max-width: 100%;
+  }
+
+  .order1 {
+    order: 3;
+    height: auto !important;
+    transform: translateY(-100px);
+  }
+
+  .order2 {
+    order: 2;
+  }
+}
