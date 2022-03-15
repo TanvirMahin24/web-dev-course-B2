@@ -1,0 +1,31 @@
+CREATE TABLE employee(
+    id int PRIMARY KEY auto_increment,
+    firstName varchar(20) not null,
+    lastName varchar(20) not null,
+    age int not null,
+    address varchar(255) not null,
+    city varchar(25) not null,
+    phone varchar(11) not null,
+    salary int not null,
+    role enum("n", "a") default "n"
+);
+
+
+
+INSERT INTO employee
+VALUES
+(1, "Barik", "Sadik", 28, "Thon Thonia", "Bogura", "01727926560", 30000, "n"),
+(2, "Sabbir", "Hasan", 29, "Shakpala", "Bogura", "01735992997", 35000, "n"),
+(3, "Himel", "Shekh", 27, "Lokkhipur", "Rajshahi", "01727326460", 32000, "n"),
+(4, "Abdur", "Rakib", 28, "Shingra", "Natore", "01635541997", 45000, "a"),
+(5, "Mizanur", "Rahman", 27, "Khandar", "Bogura", "01727926560", 35000, "n"),
+(6, "Abid", "Hasan", 29, "Murol Nagor", "Chittagong", "01835112997", 25000, "n"),
+(7, "Mehedi", "Hasan", 25, "Thon Thonia", "Bogura", "01727926560", 28000, "n"),
+(8, "Marzia", "Khatun", 18, "Khandar", "Bogura", "01935672227", 20000, "n"),
+(9, "Dhruba", "Mitra", 30, "Nobi Nagor", "Chittagong", "01827932577", 50000, "a"),
+(10, "Tazma", "Khatun", 27, "Talaimari", "Rajshahi", "01930884772", 28000, "n"),
+(11, "Mizanur", "Rahman", 28, "Kajla", "Rajshahi", "01727926560", 35000, "n"),
+(12, "Nowfel", "Sadik", 30, "Bonani", "Dhaka", "01830886667", 36000, "n"),
+(13, "Sirajul", "Islam", 45, "Khandar", "Bogura", "01727926560", 38000, "n"),
+(14, "Abdus", "Salam", 18, "Khandar", "Bogura", "01934672227", 22000, "n"),
+(15, "Ragib", "Ishrak", 32, "Nobi Nagor", "Chittagong", "01789334007", 48000, "n");
