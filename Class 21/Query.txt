@@ -1,0 +1,66 @@
+=========================================================================================================
+==================================================== QUERY ==============================================
+=========================================================================================================
+
+1. SHOW ALL DATA:
+	SELECT * FROM employee;
+
+2. Query for Selecting Columns from a Table
+	SELECT firstName, lastName FROM persons
+
+3. Selecting data with conditions
+	SELECT id, firstName, lastname, address FROM employee
+	WHERE city = 'Bogura';
+
+
+4. ORDER BY (asc, desc)
+	SELECT id, firstName, lastname, salary FROM EMPLOYEE
+	WHERE city = 'Bogura' ORDER BY salary;
+
+
+5. SHOW DISTINCT DATA:
+	SELECT DISTINCT city FROM employee;
+
+
+6. COUNT DISTINCT CITY
+	SELECT Count(DISTINCT(city)) AS DistinctCities
+	FROM employee;
+
+
+7. COUNT SALARY GREATER THAN 30000
+	SELECT Count(salary > 30000) AS SalaryGreaterThan30000
+	FROM employee;
+
+
+8. AND operator
+	SELECT firstName, lastName, salary
+	FROM employee 
+	WHERE salary >= 25000 AND salary <= 35000;
+
+
+10. OR operator
+	SELECT firstName, lastName, city
+	FROM employee 
+	WHERE city = "Dhaka" OR city =  "Rajshahi";
+
+
+11. IN operator
+	SELECT firstName, lastname, address
+	FROM employee
+	WHERE address IN ("Shingra", "Thon Thonia", "Bonani");
+
+
+12. COUNT + GROUP BY + ORDER BY
+	SELECT COUNT(salary), salary FROM employee
+	WHERE salary < 35000 GROUP BY salary ORDER BY salary
+
+
+13. SUM
+	SELECT SUM(Salary)
+	FROM Employee 
+	WHERE Emp_Age < 30;
+
+
+14. AVG
+	SELECT AVG(salary)
+	FROM employee;
