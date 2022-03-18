@@ -1,0 +1,33 @@
+===========================================================================================================================
+============================================================ QUERY ========================================================
+===========================================================================================================================
+
+
+* Show the salary with 20% bonus
+
+SELECT firstName, lastName, salary, (salary * 0.2) AS Bonus, (salary + salary * 0.2) AS Total
+FROM employee;
+
+
+* LEFT JOIN
+
+SELECT persons.firstName, persons.lastName, orders.id
+FROM persons
+LEFT JOIN orders
+ON persons.id = orders.personId
+
+
+* RIGHT JOIN
+
+SELECT orders.id, orders.orderNumber, persons.firstName,
+FROM orders
+RIGHT JOIN persons
+ON orders.personId = persons.id
+
+
+* HAVING
+
+SELECT COUNT(id), city
+FROM employee
+GROUP BY city
+HAVING COUNT(id) > 5;
