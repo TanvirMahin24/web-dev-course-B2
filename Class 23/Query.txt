@@ -1,0 +1,39 @@
+==========================================================================================================
+================================================= QUERY ==================================================
+==========================================================================================================
+
+** Self Join
+
+SELECT a.id AS "People_ID",a.name AS "People Name", b.id AS "Supervisor ID",b.name AS "Supervisor Name"
+FROM peoples a, peoples b
+WHERE a.supervisor = b.id;
+
+
+** Simple Question
+
+SELECT a.id, a.firstName, a.lastName, b.ordernumber
+FROM persons a, orders b
+WHERE a.id = b.personId
+ORDER BY a.firstName;
+
+
+** Nested Query
+
+SELECT *
+FROM employee
+WHERE id IN (
+    SELECT id
+    FROM employee 
+    WHERE salary > 30000
+);
+
+
+** Nested Query
+
+SELECT * 
+FROM employee
+WHERE salary > 30000 AND age IN (
+    SELECT age
+    FROM employee
+    WHERE AGE >= 30
+);

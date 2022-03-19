@@ -1,0 +1,25 @@
+CREATE TABLE peoples(
+	id varchar(5) NOT NULL,
+	name varchar(20) NULL,
+	date_of_join date NULL,
+	supervisor varchar(5) NULL,
+	CONSTRAINT id PRIMARY KEY(id),
+
+	CONSTRAINT supervisor FOREIGN KEY(supervisor) 
+	REFERENCES peoples(id)
+);
+
+
+INSERT INTO peoples
+VALUES 
+('1', 'Barik', '2022-03-01', '1'),
+('2', 'Sadik', '2022-03-02', '1'),
+('3', 'Mehedi', '2022-03-03', '2'),
+('4', 'Hasan', '2022-03-03', '3'),
+('5', 'Miraj', '2022-03-03', '3'),
+('6', 'Habiba', '2022-03-04', '2'),
+('7', 'Sabbir', '2022-03-07', '5'),
+('8', 'Rakib', '2022-03-07', '2'),
+('9', 'Murad', '2022-03-08', '2'),
+('10', 'Simanto', '2022-03-08', '1');
+
