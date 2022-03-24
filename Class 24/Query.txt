@@ -1,0 +1,43 @@
+1. Fetch all data
+
+SELECT *
+FROM employee;
+
+
+
+2. Fetch data that have id = 4
+
+SELECT *
+FROM employee
+WHERE id = 4
+
+
+
+3. Fetch all data and show salary increment
+
+SELECT *, (salary + salary * 0.20) AS Salary_Increment
+FROM employee;
+
+
+
+4. Update Name who have id = 4
+
+UPDATE employee
+SET firstName = 'Abdus', lastName = 'Salam'
+WHERE id = 4;
+
+
+
+5. Fetch data who have salary > 30000 but age < 30
+
+SELECT *
+FROM employee
+WHERE salary > 30000 && age < 30;
+
+
+
+6. Show distinct city and their count
+
+SELECT city, count(*)
+FROM employee
+GROUP BY city;
